@@ -9,7 +9,52 @@ import { profileFormSnippet } from './snippets/profileFormSnippet';
 import { formStateSnippet } from './snippets/formStateSnippet';
 import './App.css';
 
+import { useEffect } from 'react';
+
 function App() {
+  const updateFormHeight = () => {
+    const forms = document.querySelectorAll('.form-container');
+    forms.forEach((form, index) => {
+      const height = form.getBoundingClientRect().height;
+      const codeContainer = document.querySelectorAll('.code-container')[index] as HTMLElement;
+      if (codeContainer) {
+        codeContainer.style.setProperty('--form-height', `${height}px`);
+      }
+    });
+  };
+
+  useEffect(() => {
+    // Initial measurement
+    updateFormHeight();
+
+    // Measure after a short delay to account for any animations/transitions
+    const timeout = setTimeout(updateFormHeight, 100);
+
+    // Measure on window resize
+    window.addEventListener('resize', updateFormHeight);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', updateFormHeight);
+      clearTimeout(timeout);
+    };
+  }, []);
+
+  // Re-measure when form content might change
+  useEffect(() => {
+    const observer = new MutationObserver(updateFormHeight);
+    const forms = document.querySelectorAll('.form-container');
+    
+    forms.forEach(form => {
+      observer.observe(form, {
+        subtree: true,
+        childList: true,
+        characterData: true
+      });
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>

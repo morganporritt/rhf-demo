@@ -2,7 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
-  color: #333;
+  color: white;
 }
 
 h1 {
@@ -67,14 +67,15 @@ h1 {
 }
 
 .form-container {
-  background-color: white;
+  background-color: #2f2f2f;
+  color: #f8f8f2;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .form-container h2 {
-  color: #333;
   text-align: center;
   font-weight: 500;
 }
@@ -92,7 +93,7 @@ h1 {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #555;
+  color: white;
   font-weight: 500;
 }
 
@@ -102,8 +103,8 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #d3d3d3;
+  color: rgb(34, 34, 34);
   box-sizing: border-box;
 }
 
@@ -114,7 +115,7 @@ h1 {
   border-radius: 4px;
   font-size: 1rem;
   background-color: #f9f9f9;
-  color: #333;
+  color: white;
   margin-bottom: 0.5rem;
 }
 
@@ -156,8 +157,8 @@ h1 {
 }
 
 .checkbox-label input[type="checkbox"]:checked {
-  background-color: #4CAF50;
-  border-color: #4CAF50;
+  background-color: #324bac;
+  border-color: #324bac;
 }
 
 .checkbox-label input[type="checkbox"]:checked::after {
@@ -178,7 +179,7 @@ h1 {
 }
 
 .field-description {
-  color: #666;
+  color: #f9f9f9;
   font-size: 0.875rem;
   margin-top: 0.5rem;
   font-style: italic;
@@ -197,7 +198,9 @@ h1 {
 .submitted-data .code-block {
   margin: 0.5rem 0;
   border-radius: 4px;
-  overflow: hidden;
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 button {
@@ -238,9 +241,14 @@ button {
 
 .code-container {
   background-color: #282a36;
-  border-radius: 8px;
   padding: 1.5rem;
-  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: var(--form-height, auto);
+  position: sticky;
+  top: 1rem;
 }
 
 .code-container h2 {
@@ -259,7 +267,10 @@ button {
 .code-block pre {
   margin: 0;
   padding: 1rem;
-  background-color: #282a36;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  height: 100%;
 }
 
 .line-number {
@@ -275,7 +286,7 @@ button {
 }
 
 .info {
-  color: #6272a4;
+  color: #8095d4;
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: block;
@@ -300,13 +311,13 @@ button {
   font-size: 0.875rem;
   margin-left: 0.5rem;
   color: #f8f8f2;
-  background-color: #fb0000;
+  background-color: #a30000;
   transition: all 0.2s;
   margin-top: 0.25rem;
 }
 
 .status-indicator.active {
-  background-color: #fb0000;
+  background-color: #a30000;
 }
 
 .green {
@@ -329,10 +340,9 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: #333;
-  background-color: #f0f0f0;
+  background-color: #292929;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
