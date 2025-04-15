@@ -18,6 +18,53 @@ h1 {
   margin: 0 auto;
 }
 
+.documentation-links {
+  background-color: #282a36;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.documentation-links h2 {
+  color: #9d9d9d;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.documentation-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.documentation-links li {
+  margin: 0;
+}
+
+.documentation-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #515151;
+  border-radius: 4px;
+  color: #b4b4b4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid #6c6c6c;
+}
+
+.documentation-links a:hover {
+  background-color: #909090;
+  color: #f8f8f2;
+  border-color: #9d9d9d;
+}
+
 .form-container {
   background-color: white;
   padding: 2rem;
@@ -104,7 +151,7 @@ button {
 .code-container h2 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #bd93f9;
+  color: #9d9d9d;
 }
 
 .code-block {

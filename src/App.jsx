@@ -236,6 +236,32 @@ function ProfileForm() {
   return (
     <>
       <h1>React Hook Form Demo</h1>
+      <div className="documentation-links">
+        <h2>Important Links & Documentation</h2>
+        <ul>
+          <li>
+            <a href="https://react-hook-form.com/" target="_blank">React Hook Form Official Website</a>
+          </li>
+          <li>
+            <a href="https://react-hook-form.com/get-started" target="_blank">Getting Started Guide</a>
+          </li>
+          <li>
+            <a href="https://react-hook-form.com/docs" target="_blank">API Documentation</a>
+          </li>
+          <li>
+            <a href="https://react-hook-form.com/form-builder" target="_blank">Form Builder</a>
+          </li>
+          <li>
+            <a href="https://react-hook-form.com/dev-tools" target="_blank">DevTools</a>
+          </li>
+          <li>
+            <a href="https://react-hook-form.com/faqs" target="_blank">FAQs</a>
+          </li>
+          <li>
+            <a href="https://github.com/react-hook-form/react-hook-form" target="_blank">GitHub Repository</a>
+          </li>
+        </ul>
+      </div>
       <div className="page-container">
         <div className="form-container">
           <h2>Login Example</h2>
