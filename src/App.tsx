@@ -10,6 +10,7 @@ import { controlledFormSnippet } from './snippets/controlledFormSnippet';
 import { profileFormSnippet } from './snippets/profileFormSnippet';
 import { formStateSnippet } from './snippets/formStateSnippet';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import { useEffect } from 'react';
 
@@ -217,6 +218,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </>
   );
 }
