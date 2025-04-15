@@ -18,8 +18,8 @@ export function ControlledForm() {
     reset
   } = useForm<ControlledFormData>({
     defaultValues: {
-      firstName: 'John',
-      lastName: 'Doe',
+      firstName: 'JOHN',
+      lastName: 'DOE',
       title: 'mr',
       newsletter: true,
       interests: ['sports', 'music']

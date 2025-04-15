@@ -2,6 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  color: #333;
 }
 
 h1 {
@@ -211,20 +212,20 @@ button {
 .button-group {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .submit-btn {
   background-color: #4CAF50;
   color: white;
-  width: 100%;
-  margin-top: 1rem;
+  flex: 1;
 }
 
 .clear-btn {
   background-color: #44475a;
   color: #f8f8f2;
   transition: all 0.2s;
+  flex: 1;
 }
 
 .clear-btn:hover {
@@ -278,6 +279,68 @@ button {
   font-size: 0.875rem;
   margin-top: 0.25rem;
   display: block;
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  color: #f8f8f2;
+  background-color: #d2d2d2;
+  transition: all 0.2s;
+  margin-top: 0.25rem;
+}
+
+.touched-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  color: #f8f8f2;
+  background-color: #fb0000;
+  transition: all 0.2s;
+  margin-top: 0.25rem;
+}
+
+.status-indicator.active {
+  background-color: #fb0000;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.form-status {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 1024px) {

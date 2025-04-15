@@ -8,8 +8,8 @@ function ControlledForm() {
     formState: { errors }
   } = useForm({
     defaultValues: {
-      firstName: 'John',
-      lastName: 'Doe',
+      firstName: 'JOHN',
+      lastName: 'DOE',
       title: 'mr',
       newsletter: true,
       interests: ['sports', 'music']
