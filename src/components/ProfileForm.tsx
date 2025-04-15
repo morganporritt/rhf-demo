@@ -29,7 +29,7 @@ export function ProfileForm() {
   const validateUsername = async (value: string) => {
     setIsCheckingUsername(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     setIsCheckingUsername(false);
     // Simulate username check (for demo, usernames containing 'taken' are considered unavailable)
     return !value.toLowerCase().includes('taken') || 'Username is already taken';

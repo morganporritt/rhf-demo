@@ -3,7 +3,9 @@ import { LoginForm } from './components/LoginForm';
 import { ProfileForm } from './components/ProfileForm';
 import { ControlledForm } from './components/ControlledForm';
 import { FormStateExample } from './components/FormStateExample';
+import ZodValidationForm from './components/ZodValidationForm';
 import { loginFormSnippet } from './snippets/loginFormSnippet';
+import { zodValidationSnippet } from './snippets/zodValidationSnippet';
 import { controlledFormSnippet } from './snippets/controlledFormSnippet';
 import { profileFormSnippet } from './snippets/profileFormSnippet';
 import { formStateSnippet } from './snippets/formStateSnippet';
@@ -171,6 +173,32 @@ function App() {
           <h2>Code Implementation</h2>
           <div className="code-block">
             <Highlight theme={themes.dracula} code={formStateSnippet} language="tsx">
+              {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre className={className} style={style}>
+                  {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({ line, key: i })}>
+                      <span className="line-number">{i + 1}</span>
+                      <span className="line-content">
+                        {line.map((token, key) => (
+                          <span key={key} {...getTokenProps({ token, key })} />
+                        ))}
+                      </span>
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
+          </div>
+        </div>
+      </div>
+
+      {/* Zod Validation Form */}
+      <div className="page-container" style={{ marginTop: '32px' }}>
+        <ZodValidationForm />
+        <div className="code-container">
+          <h2>Code Implementation</h2>
+          <div className="code-block">
+            <Highlight theme={themes.dracula} code={zodValidationSnippet} language="tsx">
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre className={className} style={style}>
                   {tokens.map((line, i) => (

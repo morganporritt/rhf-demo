@@ -21,8 +21,8 @@ function ProfileForm() {
 
       {/* Age field */}
       <input type="number" {...register('age', {
-        min: { value: 18, message: 'Must be 18+' },
-        max: { value: 100, message: 'Max age 100' }
+        min: { value: 18, message: 'Must be at least 18 years old' },
+        max: { value: 100, message: 'Age cannot exceed 100' }
       })} />
 
       {/* Website field */}
@@ -33,7 +33,7 @@ function ProfileForm() {
             new URL(value);
             return true;
           } catch {
-            return 'Must be a valid URL';
+            return 'Must be a valid URL starting with http:// or https://';
           }
         }
       })} />
@@ -42,7 +42,14 @@ function ProfileForm() {
       <input {...register('phone', {
         pattern: {
           value: /^\\([0-9]{3}\\) [0-9]{3}-[0-9]{4}$/,
-          message: 'Use (XXX) XXX-XXXX format'
+          message: 'Phone number must be in format (XXX) XXX-XXXX'
+        },
+        validate: {
+          validArea: (value) => {
+            if (!value) return true;
+            const areaCode = value.match(/\d{3}/)?.[0];
+            return !areaCode?.startsWith('0') || 'Area code cannot start with 0';
+          }
         }
       })} />
     </form>
