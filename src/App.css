@@ -102,11 +102,10 @@ h1 {
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px; /* Minimum font size to prevent iOS zoom */
+  font-size: 1rem;
   background-color: #d3d3d3;
   color: rgb(34, 34, 34);
   box-sizing: border-box;
-  touch-action: manipulation; /* Prevent double-tap zoom */
 }
 
 .select-input {
@@ -114,11 +113,10 @@ h1 {
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px; /* Minimum font size to prevent iOS zoom */
+  font-size: 1rem;
   background-color: #d3d3d3;
   color: #333;
   margin-bottom: 0.5rem;
-  touch-action: manipulation; /* Prevent double-tap zoom */
 }
 
 .checkbox-group {
