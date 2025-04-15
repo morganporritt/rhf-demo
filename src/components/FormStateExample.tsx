@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { SubmittedData } from './SubmittedData';
 
 interface FormStateData {
   username: string;
@@ -28,11 +30,13 @@ export function FormStateExample() {
     }
   });
 
+  const [submittedData, setSubmittedData] = useState<FormStateData | null>(null);
+
   const onSubmit = async (data: FormStateData) => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     console.log('Form state example submitted:', data);
-    alert('Form state example submitted successfully! Check console for details.');
+    setSubmittedData(data);
     reset();
   };
 
@@ -121,6 +125,10 @@ export function FormStateExample() {
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
       </form>
+      <SubmittedData 
+        data={submittedData} 
+        onClear={() => setSubmittedData(null)} 
+      />
     </div>
   );
 }

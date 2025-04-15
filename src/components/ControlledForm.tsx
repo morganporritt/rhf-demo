@@ -1,4 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
+import { useState } from 'react';
+import { SubmittedData } from './SubmittedData';
 
 interface ControlledFormData {
   firstName: string;
@@ -24,9 +26,11 @@ export function ControlledForm() {
     }
   });
 
+  const [submittedData, setSubmittedData] = useState<ControlledFormData | null>(null);
+
   const onSubmit = (data: ControlledFormData) => {
     console.log('Controlled form submitted:', data);
-    alert('Controlled form submitted successfully! Check console for details.');
+    setSubmittedData(data);
     reset();
   };
 
@@ -157,6 +161,10 @@ export function ControlledForm() {
 
         <button type="submit" className="submit-btn">Submit</button>
       </form>
+      <SubmittedData 
+        data={submittedData} 
+        onClear={() => setSubmittedData(null)} 
+      />
     </div>
   );
 }

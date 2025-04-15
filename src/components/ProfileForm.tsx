@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { SubmittedData } from './SubmittedData';
 
 interface ProfileFormData {
   username: string;
@@ -34,9 +35,11 @@ export function ProfileForm() {
     return !value.toLowerCase().includes('taken') || 'Username is already taken';
   };
 
+  const [submittedData, setSubmittedData] = useState<ProfileFormData | null>(null);
+
   const onSubmit = (data: ProfileFormData) => {
     console.log('Profile form submitted:', data);
-    alert('Profile form submitted successfully! Check console for details.');
+    setSubmittedData(data);
     reset();
   };
 
@@ -135,6 +138,10 @@ export function ProfileForm() {
 
         <button type="submit" className="submit-btn">Submit Profile</button>
       </form>
+      <SubmittedData 
+        data={submittedData} 
+        onClear={() => setSubmittedData(null)} 
+      />
     </div>
   );
 }

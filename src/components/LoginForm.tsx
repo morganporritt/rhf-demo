@@ -1,4 +1,6 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { SubmittedData } from './SubmittedData';
 
 interface LoginFormData {
   email: string;
@@ -23,9 +25,11 @@ export function LoginForm() {
 
   const password = watch('password');
 
+  const [submittedData, setSubmittedData] = useState<LoginFormData | null>(null);
+
   const onSubmit = (data: LoginFormData) => {
     console.log('Login form submitted:', data);
-    alert('Login form submitted successfully! Check console for details.');
+    setSubmittedData(data);
     reset();
   };
 
@@ -91,6 +95,10 @@ export function LoginForm() {
 
         <button type="submit" className="submit-btn">Submit</button>
       </form>
+      <SubmittedData 
+        data={submittedData} 
+        onClear={() => setSubmittedData(null)} 
+      />
     </div>
   );
 }
