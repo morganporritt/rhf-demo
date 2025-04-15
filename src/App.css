@@ -108,6 +108,21 @@ h1 {
   box-sizing: border-box;
 }
 
+/* Chrome autofill styles */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover,
+.form-group input:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(34, 34, 34);
+  -webkit-box-shadow: 0 0 0px 1000px #d3d3d3 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox autofill styles */
+.form-group input:autofill {
+  background-color: #d3d3d3 !important;
+  color: rgb(34, 34, 34) !important;
+}
+
 .select-input {
   width: 100%;
   padding: 0.75rem;
