@@ -1,3 +1,13 @@
+html {
+  color-scheme: dark;
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  background-color: #242424;
+}
+
 #root {
   max-width: 1400px;
   margin: 0 auto;
