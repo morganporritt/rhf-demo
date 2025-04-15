@@ -31,9 +31,9 @@ function FormStateExample() {
     }
   });
 
-  const [submittedData, setSubmittedData] = useState<FormStateData | null>(null);
+  const [submittedData, setSubmittedData] = useState<FormStateData>;
 
-  const onSubmit = async (data: FormStateData, e: React.BaseSyntheticEvent | undefined) => {
+  const onSubmit = async (data: FormStateData, e: React.BaseSyntheticEvent) => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
