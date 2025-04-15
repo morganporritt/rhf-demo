@@ -151,10 +151,11 @@ export function FormStateExample() {
         <div className="form-status">
           <p className="field-description">
             The form state panel below shows real-time updates of the form's state. Learn more about
-            <a href="https://react-hook-form.com/docs/useform/formstate#formStateisdirty" target="_blank">isDirty</a>,
-            <a href="https://react-hook-form.com/docs/useform/formstate#formStatedirtyFields" target="_blank">dirtyFields</a>,
-            <a href="https://react-hook-form.com/docs/useform/formstate#formStatetouchedFields" target="_blank">touchedFields</a>, and
-            <a href="https://react-hook-form.com/docs/useform/formstate#formStateisValid" target="_blank">isValid</a>.
+            <a href="https://react-hook-form.com/docs/useform/formstate#formStateisdirty" target="_blank"> isDirty</a>, 
+            <a href="https://react-hook-form.com/docs/useform/formstate#formStatedirtyFields" target="_blank"> dirtyFields</a>, 
+            <a href="https://react-hook-form.com/docs/useform/formstate#formStatetouchedFields" target="_blank"> touchedFields</a>,
+            <a href="https://react-hook-form.com/docs/useform/formstate#formStateisValid" target="_blank"> isValid</a>, and
+            <a href="https://react-hook-form.com/docs/useform/reset" target="_blank"> reset</a>.
           </p>
 
           <div className="status-row">
