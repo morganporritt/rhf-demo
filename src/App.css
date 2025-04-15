@@ -1,0 +1,150 @@
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: grey;
+  margin-bottom: 2rem;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-container h3 {
+  color: #717171;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.field-description {
+  color: #666;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.code-container {
+  background-color: #282a36;
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.code-container h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #bd93f9;
+}
+
+.code-block {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #282a36;
+}
+
+.line-number {
+  display: inline-block;
+  width: 2rem;
+  margin-right: 1rem;
+  color: #6272a4;
+  text-align: right;
+}
+
+.line-content {
+  display: inline-block;
+}
+
+.info {
+  color: #6272a4;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  #root {
+    padding: 1rem;
+  }
+}
